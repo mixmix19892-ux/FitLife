@@ -1,5 +1,5 @@
-import sys
 import io
+import sys
 
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
 
@@ -51,11 +51,13 @@ def water_needed(user_weight):
     return round(water_l, 1)
 
 
+water_liters = water_needed(user_weight)
+
 # 4. Вывод красивого результата
 # TODO: Используй f-строку, чтобы вывести приветствие,
-# например: "Привет, Иван!"
+# TODO: например: "Привет, Иван!"
 # TODO: Выведи возраст, ИМТ (округленный до 1 знака) и норму воды.
 print(f'Отчет для пользователя: {user_name} ({user_age} лет)')
 print(f'Твой Индекс Массы Тела: {bmi}')
-print(f'Рекомендуемая норма воды: {water_needed(user_weight):.1f} л. в день')
+print(f'Рекомендуемая норма воды: {water_liters:.1f} л. в день')
 print("Расчет окончен. Будьте здоровы!")
